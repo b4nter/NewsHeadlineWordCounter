@@ -96,9 +96,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TitleScanner\TitleScanner.csproj">
+    <ProjectReference Include="..\TitleScanner\HeadlinesWordCounter.csproj">
       <Project>{90e6b664-8d77-4db2-862f-45b9ce12bf62}</Project>
-      <Name>TitleScanner</Name>
+      <Name>HeadlinesWordCounter</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
