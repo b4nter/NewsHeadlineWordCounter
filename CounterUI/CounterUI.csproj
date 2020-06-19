@@ -69,7 +69,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MessageBox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -96,7 +95,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TitleScanner\HeadlinesWordCounter.csproj">
+    <ProjectReference Include="..\HeadlinesWordCounter\HeadlinesWordCounter.csproj">
       <Project>{90e6b664-8d77-4db2-862f-45b9ce12bf62}</Project>
       <Name>HeadlinesWordCounter</Name>
     </ProjectReference>

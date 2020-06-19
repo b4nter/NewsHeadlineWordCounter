@@ -36,20 +36,21 @@
         <!--Row 2-->
         <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"
                    Text="Scan News Headlines"></TextBlock>
+        
         <Button x:Name="ScanNewsHealdinesBtn" Grid.Row="2" Grid.Column="4"  
-                Content=" Go " Margin="5,0,0,10"></Button>
+                Content=" Go " Margin="5,0,0,10" Click="ScanNewsHealdinesBtn_Click"></Button>
+        
         <TextBlock x:Name="UpdateFeed" Grid.Row="2" Grid.Column="5" Grid.RowSpan="4"
-                   Text="{Binding}"
                    Margin="10,-10,0,0"></TextBlock>
-        <!--<StackPanel x:Name="UpdateFeed" Grid.Row="2" Grid.Column="5"
-                    Margin="10,0,0,0">
-            
-        </StackPanel>-->
+
         <!--Row 3-->
         <TextBlock x:Name="TopNumberBox" Grid.Row="3" Grid.Column="1" Text="Show top"></TextBlock>
+        
         <TextBox Grid.Row="3" Grid.Column="2" 
                  Margin="5,0,5,0" Width="50" />
+        
         <TextBlock Grid.Row="3" Grid.Column="3" Text="most common words"></TextBlock>
+        
         <Button x:Name="ShowTopCommonWordsBtn" Grid.Row="3" Grid.Column="4" Content=" Go "
                 Margin="5,0,0,0" Click="ShowTopCommonWordsBtn_Click"></Button>
     </Grid>

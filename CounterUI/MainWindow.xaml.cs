@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Text;
 using System.Windows;
 
 
@@ -10,25 +10,33 @@ namespace NewsHeadlineWordCounter
     {
         public List<string> _messages;
         public WordCounter _wordCounter;
-
+        public NewsHeadlineScanner _headlinesScanner;
         
         public MainWindow()
         {
             InitializeComponent();            
             _wordCounter = new WordCounter("D:\\User\\Projects\\news-title-reader\\titles.txt");
+            _headlinesScanner = new NewsHeadlineScanner("D:\\User\\Projects\\news-title-reader\\titles.txt",
+                                                        "D:\\User\\Projects\\news-title-reader\\url-list.txt");
         }
 
         private void ShowTopCommonWordsBtn_Click(object sender, RoutedEventArgs e)
         {
-            int.TryParse(TopNumberBox.Text, out int topNumber);
+            UpdateFeed.Text = "";
+           // int.TryParse(TopNumberBox.Text, out int topNumber);
             _messages = _wordCounter.GetTopCommonWords(100);
-            var text = "";
-            foreach (var item in _messages)
+            
+            for (int i = 0; i < _messages.Count; i++)
             {
-                text += item + "\n";
+                UpdateFeed.Text += $"{i + 1}) {_messages[i]} {Environment.NewLine}";
             }
-            UpdateFeed.Text = text;
-            //_messages = _wordCounter.GetTopCommonWords(10);
+            
+        }
+
+        private void ScanNewsHealdinesBtn_Click(object sender, RoutedEventArgs e)
+        {
+            _headlinesScanner.Update();
+            UpdateFeed.Text = _headlinesScanner._updateMessage;
         }
     }
 }

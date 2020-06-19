@@ -17,6 +17,8 @@ namespace NewsHeadlineWordCounter
         public string _urls;
         public string _fileContent;
         public int _newTitles;
+        
+        public string _updateMessage { get; set; }//***
 
         public NewsHeadlineScanner(string titles, string urlFile)
         {
@@ -37,6 +39,7 @@ namespace NewsHeadlineWordCounter
 
         public void Update()
         {
+            _updateMessage = "";
             var urlList = _urls.Split(Environment.NewLine.ToCharArray());
             foreach (var url in urlList)
             {                
@@ -49,6 +52,7 @@ namespace NewsHeadlineWordCounter
 
         public void ReadRssFeed(string url)
         {
+            _newTitles = 0;
             using (XmlReader reader = XmlReader.Create(url))
             {
                 SyndicationFeed feed = SyndicationFeed.Load(reader);
@@ -67,8 +71,8 @@ namespace NewsHeadlineWordCounter
                         }
                     }
                 }
+                _updateMessage += $"{_newTitles} new titles added from {feed.Title.Text}{Environment.NewLine}";
                 Console.WriteLine($"{_newTitles} new titles added from {feed.Title.Text}");
-                _newTitles = 0;
             }
         }
     }

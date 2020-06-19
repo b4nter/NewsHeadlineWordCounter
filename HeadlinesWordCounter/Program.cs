@@ -14,10 +14,15 @@ namespace NewsHeadlineWordCounter
             var titles = "D:\\User\\Projects\\news-title-reader\\titles.txt";
             var urlList = "D:\\User\\Projects\\news-title-reader\\url-list.txt";
             var counter = new WordCounter(titles);
+            var scanner = new NewsHeadlineScanner(titles,urlList);
             // counter.PrintTopCommonWords(1000);
-             Start(titles, urlList);
+            //     Start(titles, urlList);
+
+            scanner.Update();
+            Console.WriteLine("--------------------");
+            Console.WriteLine(scanner._updateMessage);
             //TODO:
-            //get rid of file path
+            //get rid of file paths
         }
 
         public static void Start(string titles, string urlList)
@@ -39,7 +44,7 @@ namespace NewsHeadlineWordCounter
                 switch (choice)
                 {
                     case 1:
-                        scanner.Update();
+                     //   scanner.Update();
                         break;
                     case 2:
                         Console.Write("Entery how many top words you want to see: "); 
