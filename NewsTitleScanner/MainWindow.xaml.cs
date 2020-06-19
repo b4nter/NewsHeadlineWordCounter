@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Windows;
 
 
-namespace NewsTitleScanner
+namespace NewsHeadlineWordCounter
 {    
     public partial class MainWindow : Window
     {

@@ -5,7 +5,7 @@ using System.Xml;
 using System.IO;
 using System.Collections.Generic;
 
-namespace NewsTitleScanner
+namespace NewsHeadlineWordCounter
 {
     public class Program
     {

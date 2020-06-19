@@ -1,7 +1,7 @@
-﻿<Application x:Class="NewsTitleScanner.App"
+﻿<Application x:Class="NewsHeadlineWordCounter.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:NewsTitleScanner"
+             xmlns:local="clr-namespace:NewsHeadlineWordCounter"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

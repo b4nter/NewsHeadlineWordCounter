@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace NewsTitleScanner
+namespace NewsHeadlineWordCounter
 {
     public class NewsHeadlineScanner
     {

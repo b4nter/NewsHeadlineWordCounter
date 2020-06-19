@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewsTitleScanner.Properties
+namespace NewsHeadlineWordCounter.Properties
 {
 
 
