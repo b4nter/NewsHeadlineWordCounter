@@ -67,12 +67,11 @@ namespace NewsHeadlineWordCounter
                         {
                             File.AppendAllText(_titles, title);
                             _newTitles++;
-                            // Console.WriteLine(formattedTitle);
                         }
                     }
                 }
                 _updateMessage += $"{_newTitles} new titles added from {feed.Title.Text}{Environment.NewLine}";
-                Console.WriteLine($"{_newTitles} new titles added from {feed.Title.Text}");
+                
             }
         }
     }

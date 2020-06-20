@@ -19,7 +19,6 @@ namespace NewsHeadlineWordCounter
             _titles = File.ReadAllText(titles);
             _invalidWordsFile = "D:\\User\\Projects\\news-title-reader\\not-valid-words.txt";
         }
-
         
         public List<string> GetTopCommonWords(int number)
         {
@@ -32,15 +31,6 @@ namespace NewsHeadlineWordCounter
                 topCommonWords.Add(line);
             }
             return topCommonWords;
-        }
-        public void PrintTopCommonWords(int number)
-        {
-            UpdateWordFrequency();
-            var orderedTitles = _wordFrequency.OrderByDescending(x => x.Value);
-            for (int i = 0; i < number; i++)
-            {
-                Console.WriteLine(orderedTitles.ElementAt(i));
-            }
         }
 
         //TODO:

@@ -23,8 +23,9 @@ namespace NewsHeadlineWordCounter
         private void ShowTopCommonWordsBtn_Click(object sender, RoutedEventArgs e)
         {
             UpdateFeed.Text = "";
-           // int.TryParse(TopNumberBox.Text, out int topNumber);
-            _messages = _wordCounter.GetTopCommonWords(100);
+            // int.TryParse(TopNumberBox.Text, out int topNumber);
+            int.TryParse(TopNumber.Text, out int topNumber);
+            _messages = _wordCounter.GetTopCommonWords(topNumber);
             
             for (int i = 0; i < _messages.Count; i++)
             {
@@ -35,6 +36,7 @@ namespace NewsHeadlineWordCounter
 
         private void ScanNewsHealdinesBtn_Click(object sender, RoutedEventArgs e)
         {
+            UpdateFeed.Text = "";
             _headlinesScanner.Update();
             UpdateFeed.Text = _headlinesScanner._updateMessage;
         }
