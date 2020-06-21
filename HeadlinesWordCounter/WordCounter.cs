@@ -33,13 +33,11 @@ namespace NewsHeadlineWordCounter
             return topCommonWords;
         }
 
-        //TODO:
-        //Maybe implement word file instead of Dictionary
         public void UpdateWordFrequency()
         {
             _wordFrequency = new Dictionary<string, int>();
             FormatFileContent();
-            var words = _titles.Split(' ');            
+            var words = _titles.Split(' ');
 
             for (int i = 0; i < words.Length; i++)
             {

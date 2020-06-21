@@ -70,8 +70,8 @@ namespace NewsHeadlineWordCounter
                         }
                     }
                 }
-                _updateMessage += $"{_newTitles} new titles added from {feed.Title.Text}{Environment.NewLine}";
-                
+                _fileContent = File.ReadAllText(_titles);
+                _updateMessage += $"{_newTitles} new titles added from {feed.Title.Text}{Environment.NewLine}";                
             }
         }
     }

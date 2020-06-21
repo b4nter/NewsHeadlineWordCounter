@@ -39,9 +39,12 @@
         
         <Button x:Name="ScanNewsHealdinesBtn" Grid.Row="2" Grid.Column="4"  
                 Content=" Go " Margin="5,0,0,10" Click="ScanNewsHealdinesBtn_Click"></Button>
+
+        <ScrollViewer Grid.Row="2" Grid.Column="5" Grid.RowSpan="4"
+                      Margin="10,-10,0,0">
+            <TextBlock x:Name="UpdateFeed" ></TextBlock>
+        </ScrollViewer>
         
-        <TextBlock x:Name="UpdateFeed" Grid.Row="2" Grid.Column="5" Grid.RowSpan="4"
-                   Margin="10,-10,0,0"></TextBlock>
 
         <!--Row 3-->
         <TextBlock x:Name="TopNumberBox" Grid.Row="3" Grid.Column="1" Text="Show top"></TextBlock>
