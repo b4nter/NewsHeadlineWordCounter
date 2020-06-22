@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
-
+using TitleScanner;
 
 namespace NewsHeadlineWordCounter
 {    
@@ -11,10 +11,11 @@ namespace NewsHeadlineWordCounter
         public List<string> _messages;
         public WordCounter _wordCounter;
         public NewsHeadlineScanner _headlinesScanner;
-        
+        public HeadlinesWordCounter _headlinesWordCounter;
         public MainWindow()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            _headlinesWordCounter = new HeadlinesWordCounter();
             _wordCounter = new WordCounter("D:\\User\\Projects\\news-title-reader\\titles.txt");
             _headlinesScanner = new NewsHeadlineScanner("D:\\User\\Projects\\news-title-reader\\titles.txt",
                                                         "D:\\User\\Projects\\news-title-reader\\url-list.txt");
@@ -36,8 +37,8 @@ namespace NewsHeadlineWordCounter
 
         private void ScanNewsHealdinesBtn_Click(object sender, RoutedEventArgs e)
         {
-            _headlinesScanner.Update();
-            UpdateFeed.Text = _headlinesScanner._updateMessage;
+            _headlinesWordCounter.UpdateTitles();
+            UpdateFeed.Text = _headlinesWordCounter.GetUpdateMessage();
         }
     }
 }

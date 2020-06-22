@@ -16,9 +16,8 @@ namespace NewsHeadlineWordCounter
         private string _urlFile;
         public string _urls;
         public string _fileContent;
-        public int _newTitles;
-        
-        public string _updateMessage { get; set; }//***
+        public int _newTitles;        
+        public string _updateMessage { get; set; }
 
         public NewsHeadlineScanner(string titles, string urlFile)
         {
@@ -37,7 +36,7 @@ namespace NewsHeadlineWordCounter
             }
         }
 
-        public void Update()
+        public void UpdateTitles()
         {
             _updateMessage = "";
             var urlList = _urls.Split(Environment.NewLine.ToCharArray());
