@@ -18,8 +18,6 @@ namespace NewsHeadlineWordCounter
             //TODO:
             var foo = new HeadlinesWordCounter();
 
-            //create class that handles requests from UI
-
             //Implement word file for storing word frequency in WordCounter
         }
 

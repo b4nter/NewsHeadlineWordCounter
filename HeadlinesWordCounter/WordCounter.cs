@@ -14,10 +14,10 @@ namespace NewsHeadlineWordCounter
         private string _titles;
         private Dictionary<string, int> _wordFrequency;
         private string _invalidWordsFile;
-        public WordCounter(string titles)
+        public WordCounter(string titles, string invalidWords)
         {
             _titles = File.ReadAllText(titles);
-            _invalidWordsFile = "D:\\User\\Projects\\news-title-reader\\not-valid-words.txt";
+            _invalidWordsFile = invalidWords;//"D:\\User\\Projects\\news-title-reader\\not-valid-words.txt";
         }
         
         public List<string> GetTopCommonWords(int number)

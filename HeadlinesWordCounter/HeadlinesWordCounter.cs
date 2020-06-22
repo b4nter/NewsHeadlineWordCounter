@@ -17,6 +17,7 @@ namespace TitleScanner
         public string _urlFilePath;
         public string _invalidWordsFilePath;
         public NewsHeadlineScanner _headlinesScanner;
+        public WordCounter _wordCounter;
         public HeadlinesWordCounter()
         {
             _directoryPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal) + "\\NewsHeadlineWordCounter";
@@ -25,6 +26,12 @@ namespace TitleScanner
             _invalidWordsFilePath = _directoryPath + "\\invalid-words.txt";
             InitiliazeFiles();
             _headlinesScanner = new NewsHeadlineScanner(_titlesFilePath, _urlFilePath);
+            _wordCounter = new WordCounter(_titlesFilePath, _invalidWordsFilePath);
+        }
+
+        public List<string> GetTopCommonWords(int number)
+        {
+            return _wordCounter.GetTopCommonWords(number);
         }
 
         public void UpdateTitles()
