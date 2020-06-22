@@ -12,19 +12,19 @@ namespace NewsHeadlineWordCounter
 {
     public class NewsHeadlineScanner
     {
-        private string _titles;
-        private string _urlFile;
+        private string _titlesFilePath;
+        private string _urlFilePath;
         public string _urls;
-        public string _fileContent;
+        public string _titles;
         public int _newTitles;        
         public string _updateMessage { get; set; }
 
-        public NewsHeadlineScanner(string titles, string urlFile)
+        public NewsHeadlineScanner(string titlesFilePath, string urlFilePath)
         {
-            _titles = titles;
-            _urlFile = urlFile;
-            _fileContent = File.ReadAllText(titles);
-            _urls = File.ReadAllText(urlFile);
+            _titlesFilePath = titlesFilePath;
+            _urlFilePath = urlFilePath;
+            _titles = File.ReadAllText(titlesFilePath);
+            _urls = File.ReadAllText(urlFilePath);
             _newTitles = 0;
         }
 
@@ -32,7 +32,7 @@ namespace NewsHeadlineWordCounter
         {
             if (!_urls.Contains(url))
             {
-                File.AppendAllText(_urlFile, url + Environment.NewLine);
+                File.AppendAllText(_urlFilePath, url + Environment.NewLine);
             }
         }
 
@@ -62,14 +62,14 @@ namespace NewsHeadlineWordCounter
                     var title = $"{item.PublishDate.Date} - {item.Title.Text}{Environment.NewLine}";
                     if (item.PublishDate.Date >= DateTime.Now.Date.AddDays(-1))
                     {
-                        if (!_fileContent.Contains(title))
+                        if (!_titles.Contains(title))
                         {
-                            File.AppendAllText(_titles, title);
+                            File.AppendAllText(_titlesFilePath, title);
                             _newTitles++;
                         }
                     }
                 }
-                _fileContent = File.ReadAllText(_titles);
+                _titles = File.ReadAllText(_titlesFilePath);
                 _updateMessage += $"{_newTitles} new titles added from {feed.Title.Text}{Environment.NewLine}";                
             }
         }

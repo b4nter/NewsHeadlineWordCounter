@@ -17,7 +17,7 @@ namespace NewsHeadlineWordCounter
         public WordCounter(string titles, string invalidWords)
         {
             _titles = File.ReadAllText(titles);
-            _invalidWordsFile = invalidWords;//"D:\\User\\Projects\\news-title-reader\\not-valid-words.txt";
+            _invalidWordsFile = invalidWords;
         }
         
         public List<string> GetTopCommonWords(int number)

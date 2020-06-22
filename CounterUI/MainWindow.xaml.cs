@@ -26,11 +26,10 @@ namespace NewsHeadlineWordCounter
             for (int i = 0; i < _messages.Count; i++)
             {
                 UpdateFeed.Text += $"{i + 1}) {_messages[i]} {Environment.NewLine}";
-            }
-            
+            }            
         }
 
-        private void ScanNewsHealdinesBtn_Click(object sender, RoutedEventArgs e)
+        private void ScanNewsHeadlinesBtn_Click(object sender, RoutedEventArgs e)
         {
             _headlinesWordCounter.UpdateTitles();
             UpdateFeed.Text = _headlinesWordCounter.GetUpdateMessage();

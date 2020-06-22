@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NewsHeadlineWordCounter"
         mc:Ignorable="d" FontFamily="Segoe UI Light" FontSize="18"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="950">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -24,37 +24,53 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
+        
         
         <!--Row 1-->
         <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="7"
                    Text="News Headlines Word Counter" FontSize="28" 
                    HorizontalAlignment="Center" Margin="0,0,0,25" ></TextBlock>
-        
-        <!--Row 2-->
-        <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"
-                   Text="Scan News Headlines"></TextBlock>
-        
-        <Button x:Name="ScanNewsHealdinesBtn" Grid.Row="2" Grid.Column="4"  
-                Content=" Go " Margin="5,0,0,10" Click="ScanNewsHealdinesBtn_Click"></Button>
 
-        <ScrollViewer Grid.Row="2" Grid.Column="5" Grid.RowSpan="4"
+        <!--Row 2-->
+        <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" 
+                   Text="Show URL RSS Feed list"></TextBlock>
+        <Button x:Name="ShowUrlListBtn" Grid.Row="2" Grid.Column="4" 
+                Content=" Go" Margin="5,0,0,10"></Button>
+        
+        <!--Update Feed-->
+        <ScrollViewer Grid.Row="2" Grid.Column="5" Grid.RowSpan="5"
                       Margin="10,-10,0,0">
             <TextBlock x:Name="UpdateFeed" ></TextBlock>
         </ScrollViewer>
         
-
         <!--Row 3-->
-        <TextBlock x:Name="TopNumberBox" Grid.Row="3" Grid.Column="1" Text="Show top"></TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"
+                   Text="Add URL to the list" Margin="0,0,0,10"></TextBlock>
+        <TextBox Grid.Row="3" Grid.Column="2" Width="200" Grid.ColumnSpan="4"
+                 Margin="35,0,0,10"></TextBox>
         
-        <TextBox x:Name="TopNumber"  Grid.Row="3" Grid.Column="2" 
+        <!--Row 4-->
+        <TextBlock Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" 
+                   Text="Scan News Headlines"></TextBlock>
+
+        <Button x:Name="ScanNewsHeadlinesBtn" Grid.Row="4" Grid.Column="4"  
+                Content=" Go " Margin="5,0,0,10" Click="ScanNewsHeadlinesBtn_Click"></Button>
+
+        <!--Row 5-->
+        <TextBlock x:Name="TopNumberBox" Grid.Row="5" Grid.Column="1" 
+                   Text="Show top"></TextBlock>
+        
+        <TextBox x:Name="TopNumber"  Grid.Row="5" Grid.Column="2" 
                  Margin="5,0,5,0" Width="50" />
         
-        <TextBlock Grid.Row="3" Grid.Column="3" Text="most common words"></TextBlock>
+        <TextBlock Grid.Row="5" Grid.Column="3" Text="most common words"></TextBlock>
         
-        <Button x:Name="ShowTopCommonWordsBtn" Grid.Row="3" Grid.Column="4" Content=" Go "
+        <Button x:Name="ShowTopCommonWordsBtn" Grid.Row="5" Grid.Column="4" Content=" Go "
                 Margin="5,0,0,0" Click="ShowTopCommonWordsBtn_Click"></Button>
     </Grid>
 </Window>
