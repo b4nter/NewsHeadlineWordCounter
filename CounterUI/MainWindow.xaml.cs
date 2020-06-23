@@ -34,5 +34,10 @@ namespace NewsHeadlineWordCounter
             _headlinesWordCounter.UpdateTitles();
             UpdateFeed.Text = _headlinesWordCounter.GetUpdateMessage();
         }
+
+        private void AddUrlBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

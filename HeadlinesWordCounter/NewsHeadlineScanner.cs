@@ -56,7 +56,6 @@ namespace NewsHeadlineWordCounter
             {
                 SyndicationFeed feed = SyndicationFeed.Load(reader);
 
-                var newTitles = 0;
                 foreach (SyndicationItem item in feed.Items)
                 {
                     var title = $"{item.PublishDate.Date} - {item.Title.Text}{Environment.NewLine}";

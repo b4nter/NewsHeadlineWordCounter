@@ -13,8 +13,6 @@ namespace NewsHeadlineWordCounter
         
         public static void Main(string[] args)
         {
-            var titles = "D:\\User\\Projects\\news-title-reader\\titles.txt";
-            var urlList = "D:\\User\\Projects\\news-title-reader\\url-list.txt";
             //TODO:
             var foo = new HeadlinesWordCounter();
 
