@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Windows;
 using TitleScanner;
@@ -12,7 +13,7 @@ namespace NewsHeadlineWordCounter
         public HeadlinesWordCounter _headlinesWordCounter;
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();            
             _headlinesWordCounter = new HeadlinesWordCounter();
         }
 
@@ -39,5 +40,6 @@ namespace NewsHeadlineWordCounter
         {
 
         }
+
     }
 }
