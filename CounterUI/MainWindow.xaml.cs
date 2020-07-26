@@ -9,19 +9,13 @@ namespace NewsHeadlineWordCounter
 {    
     public partial class MainWindow : Window
     {
-    //    private System.Windows.Forms.NotifyIcon m_notifyIcon;
-
-
         public List<string> _messages;
         public HeadlinesWordCounter _headlinesWordCounter;
         public MainWindow()
         {
-           // this.Show();
-            InitializeComponent();
-            
+            InitializeComponent();            
             _headlinesWordCounter = new HeadlinesWordCounter();
         }
-
 
         private void ShowTopCommonWordsBtn_Click(object sender, RoutedEventArgs e)
         {

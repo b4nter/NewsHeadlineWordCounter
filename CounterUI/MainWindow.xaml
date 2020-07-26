@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:NewsHeadlineWordCounter"
         mc:Ignorable="d" FontFamily="Segoe UI Light" FontSize="18"
         Title="MainWindow" Height="450" Width="950" 
-        WindowStartupLocation="CenterScreen" Icon="icon.png">
+        WindowStartupLocation="CenterScreen" Icon="word-plus.ico">
     
     <Grid>
         <Grid.ColumnDefinitions>

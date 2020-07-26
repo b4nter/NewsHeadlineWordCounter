@@ -17,16 +17,7 @@ namespace NewsHeadlineWordCounter
             base.OnStartup(e);
             //create the notifyicon (it's a resource declared in NotifyIconResources.xaml
             notifyIcon = (TaskbarIcon)FindResource("NotifyIcon");
-            
-            
         }
-        //private void Application_Exit(object sender, ExitEventArgs e)
-        //{
-        //    Application.Current.ShutdownMode = System.Windows.ShutdownMode.OnMainWindowClose;
-        //    var file = Environment.GetFolderPath(Environment.SpecialFolder.Personal) + "\\NewsHeadlineWordCounter\\log.txt";
-        //    File.WriteAllText(file, "exit");
-        //    notifyIcon = (TaskbarIcon)FindResource("NotifyIcon");
-        //}
 
         protected override void OnExit(ExitEventArgs e)
         {
