@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Windows;
 using TitleScanner;
@@ -8,13 +9,19 @@ namespace NewsHeadlineWordCounter
 {    
     public partial class MainWindow : Window
     {
+    //    private System.Windows.Forms.NotifyIcon m_notifyIcon;
+
+
         public List<string> _messages;
         public HeadlinesWordCounter _headlinesWordCounter;
         public MainWindow()
         {
+           // this.Show();
             InitializeComponent();
+            
             _headlinesWordCounter = new HeadlinesWordCounter();
         }
+
 
         private void ShowTopCommonWordsBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -38,6 +45,13 @@ namespace NewsHeadlineWordCounter
         private void AddUrlBtn_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = true;
+          //  this.WindowState = WindowState.Minimized;
+            this.Hide();
         }
     }
 }

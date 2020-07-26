@@ -15,9 +15,9 @@ namespace NewsHeadlineWordCounter
         {
             //TODO:
             var foo = new HeadlinesWordCounter();
-
+            var counter = new HeadlinesWordCounter();
+            counter.UpdateTitles();
             //Implement word file for storing word frequency in WordCounter
         }
-
     }
 }
