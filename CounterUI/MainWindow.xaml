@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NewsHeadlineWordCounter"
         mc:Ignorable="d" FontFamily="Segoe UI Light" FontSize="18"
-        Title="MainWindow" Height="450" Width="950">
+        Title="MainWindow" Height="450" Width="950" 
+        WindowStartupLocation="CenterScreen" Icon="icon.png"
+        Closing="Window_Closing">
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
